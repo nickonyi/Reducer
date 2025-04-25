@@ -1,18 +1,21 @@
 import { useState } from 'react';
 import AddTask from './AddTask';
 import './App.css';
+import TaskList from './TaskList';
 
 function App() {
   const [tasks, setTasks] = useState(initialTasks);
   const handleAddTask = (text) => {
     setTasks([...tasks, { id: nextId++, text: text, done: false }]);
   };
-  console.log(tasks);
+  const handleChange = () => {};
+  const handleDelete = () => {};
 
   return (
     <div className="container">
       <h1>Prague Iternery</h1>
       <AddTask onAddTask={handleAddTask} />
+      <TaskList taks={tasks} onChange={handleChange} onDelete={handleDelete} />
     </div>
   );
 }
