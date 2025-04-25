@@ -15,7 +15,11 @@ function App() {
     <div className="container">
       <h1>Prague Iternery</h1>
       <AddTask onAddTask={handleAddTask} />
-      <TaskList taks={tasks} onChange={handleChange} onDelete={handleDelete} />
+      <TaskList
+        taks={tasks}
+        onChangeTask={handleChange}
+        onDeleteTask={handleDelete}
+      />
     </div>
   );
 }

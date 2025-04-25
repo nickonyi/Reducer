@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-function Task({ tasks, onChange, onDelete }) {}
+function Task({ tasks, onChangeTask, onDeleteTask }) {}
 
-function TaskList({ tasks }) {
+function TaskList({ tasks, onChangeTask, onDeleteTask }) {
+  const [editing, isEditing] = useState(false);
   return <div>TaskList</div>;
 }
 
