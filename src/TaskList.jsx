@@ -22,15 +22,27 @@ function Task({ task, onChange, onDelete }) {
   if (isEditing) {
     taskContent = (
       <>
-        <input type="text" />
-        <button>save</button>
+        <input
+          value={task.text}
+          type="text"
+          onChange={(e) => {
+            onChange({ ...task, text: e.target.value });
+          }}
+        />
+        <button
+          onClick={() => {
+            setIsEditing(false);
+          }}
+        >
+          save
+        </button>
       </>
     );
   } else {
     taskContent = (
       <>
         {task.text}
-        <button>Edit</button>
+        <button onClick={() => setIsEditing(true)}>Edit</button>
       </>
     );
   }
