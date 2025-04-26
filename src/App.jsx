@@ -8,7 +8,17 @@ function App() {
   const handleAddTask = (text) => {
     setTasks([...tasks, { id: nextId++, text: text, done: false }]);
   };
-  const handleChange = () => {};
+  const handleChangeTask = (task) => {
+    setTasks(
+      tasks.map((t) => {
+        if (t.id === task.id) {
+          return task;
+        } else {
+          return t;
+        }
+      })
+    );
+  };
   const handleDelete = () => {};
 
   return (
@@ -17,7 +27,7 @@ function App() {
       <AddTask onAddTask={handleAddTask} />
       <TaskList
         tasks={tasks}
-        onChangeTask={handleChange}
+        onChangeTask={handleChangeTask}
         onDeleteTask={handleDelete}
       />
     </div>
