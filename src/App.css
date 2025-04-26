@@ -13,3 +13,16 @@
   gap: 5px;
   margin-block: 20px;
 }
+
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+li {
+  list-style: none;
+  label {
+    display: flex;
+    gap: 10px;
+  }
+}

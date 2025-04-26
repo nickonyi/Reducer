@@ -17,7 +17,7 @@ function TaskList({ tasks, onChangeTask, onDeleteTask }) {
 }
 
 function Task({ task, onChange, onDelete }) {
-  const [editing, isEditing] = useState(false);
+  const [isEditing, setIsEditing] = useState(false);
   let taskContent;
   if (isEditing) {
     taskContent = (
