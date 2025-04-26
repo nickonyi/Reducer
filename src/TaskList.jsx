@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 
 function TaskList({ tasks, onChangeTask, onDeleteTask }) {
-  console.log(tasks);
-
   return (
     <ul>
       {tasks.map((task) => {
