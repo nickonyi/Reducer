@@ -16,7 +16,7 @@ function App() {
       <h1>Prague Iternery</h1>
       <AddTask onAddTask={handleAddTask} />
       <TaskList
-        taks={tasks}
+        tasks={tasks}
         onChangeTask={handleChange}
         onDeleteTask={handleDelete}
       />
