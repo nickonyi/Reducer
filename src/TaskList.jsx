@@ -46,9 +46,15 @@ function Task({ task, onChange, onDelete }) {
   }
   return (
     <label>
-      <input type="checkbox" name="" id="" />
+      <input
+        type="checkbox"
+        checked={task.done}
+        onChange={(e) => {
+          onChange({ ...task, done: e.target.checked });
+        }}
+      />
       {taskContent}
-      <button>delete</button>
+      <button onClick={() => onDelete(task.id)}>delete</button>
     </label>
   );
 }

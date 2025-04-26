@@ -19,7 +19,9 @@ function App() {
       })
     );
   };
-  const handleDelete = () => {};
+  const handleDeleteTask = (taskId) => {
+    setTasks(tasks.filter((t) => t.id !== taskId));
+  };
 
   return (
     <div className="container">
@@ -28,7 +30,7 @@ function App() {
       <TaskList
         tasks={tasks}
         onChangeTask={handleChangeTask}
-        onDeleteTask={handleDelete}
+        onDeleteTask={handleDeleteTask}
       />
     </div>
   );
