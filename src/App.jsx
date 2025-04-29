@@ -2,10 +2,10 @@ import { useReducer } from 'react';
 import AddTask from './AddTask';
 import './App.css';
 import TaskList from './TaskList';
-//import taskReducer from './taskReducer';
+import taskReducer from './taskReducer';
 
 function App() {
-  const [tasks, dispatch] = useReducer(initialTasks);
+  const [tasks, dispatch] = useReducer(taskReducer, initialTasks);
   const handleAddTask = (text) => {
     dispatch({ type: 'added', id: nextId++, text: text });
   };
