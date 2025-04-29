@@ -11,7 +11,7 @@ function Messenger() {
   const contact = contacts.find((c) => c.id === state.selectedId);
 
   return (
-    <div>
+    <div className="messanger">
       <ContactList
         contacts={contacts}
         selectId={state.selectId}

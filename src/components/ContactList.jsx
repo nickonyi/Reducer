@@ -8,7 +8,7 @@ function ContactList({ contacts, selectId, dispatch, message }) {
       <ul>
         {contacts.map((contact) => (
           <li key={contact.id}>
-            <button>
+            <button className="select-btn">
               {selectId === contact.id ? <b>{contact.name}</b> : contact.name}
             </button>
           </li>

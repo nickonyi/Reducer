@@ -17,7 +17,6 @@
 ul {
   display: flex;
   flex-direction: column;
-  gap: 10px;
 }
 li {
   list-style: none;
@@ -25,4 +24,30 @@ li {
     display: flex;
     gap: 10px;
   }
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  margin-top: 140px;
+  height: 100vh;
+}
+
+.messanger {
+  display: flex;
+  gap: 20px;
+}
+
+.select-btn {
+  padding: 10px 20px;
+  width: 70px;
+}
+
+textarea {
+  height: 140px;
+}
+
+.chat-btn {
+  padding-inline: 15px;
+  padding-block: 10px;
 }
