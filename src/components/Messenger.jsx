@@ -16,7 +16,6 @@ function Messenger() {
         contacts={contacts}
         selectId={state.selectId}
         dispatch={dispatch}
-        message={message}
       />
       <Chat
         key={contact.id}

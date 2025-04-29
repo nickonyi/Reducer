@@ -3,4 +3,9 @@ export const initialState = {
   message: 'Hello',
 };
 
-export function messageReducer(state, action) {}
+export function messageReducer(state, action) {
+  switch (action.type) {
+    case 'changed_selection':
+      return { ...state, selectedId: action.contactId, message: '' };
+  }
+}
