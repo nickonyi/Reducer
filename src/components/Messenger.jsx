@@ -3,11 +3,12 @@ import { messageReducer, initialState } from './messageReducer';
 import ContactList from './ContactList';
 import Chat from './Chat';
 import { contacts } from './contact';
+import '../App.css';
 
 function Messenger() {
   const [state, dispatch] = useReducer(messageReducer, initialState);
   const message = state.messages[state.selectId];
-  const contact = contacts.find((c) => c.id === state.selectId);
+  const contact = contacts.find((c) => c.id === state.selectedId);
 
   return (
     <div>
