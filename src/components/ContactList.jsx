@@ -1,8 +1,6 @@
 import React from 'react';
 
 function ContactList({ contacts, selectId, dispatch }) {
-  console.log(contacts);
-
   return (
     <section className="contact-list">
       <ul>
